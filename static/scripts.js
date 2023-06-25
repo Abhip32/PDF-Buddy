@@ -1,16 +1,5 @@
 
-document.addEventListener("DOMContentLoaded", function() {
-  var cards = document.getElementsByClassName("fade-in");
 
-  // Add the "visible" class to each card with a delay
-  for (var i = 0; i < cards.length; i++) {
-    (function(index) {
-      setTimeout(function() {
-        cards[index].classList.add("visible");
-      }, index * 200); // Adjust the delay (in milliseconds) between each card
-    })(i);
-  }
-});
 
 function handleFileSelectImg(event) {
     var previewContainer = document.getElementById('preview-container');

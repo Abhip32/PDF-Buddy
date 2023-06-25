@@ -1,5 +1,7 @@
 {% extends 'layout.html' %}
 {% block content %}
+
+
 <div class="header-image">
     <h1 class="header-text">Every tool you need to work with PDFs in one place</h1>
   </div>
@@ -8,59 +10,59 @@
         <h4>Choose Action</h4>
     </div>
     <div class="row">
-      <div class="col-md-6 col-lg-4  mb-5 fade-in">
+      <div class="col-md-6 col-lg-4  mb-5 ">
         <div class="card border-0 shadow rounded-xs p-3 h-100">
           <div class="card-body">
-            <h5 class="card-title"><a href="{{ url_for('merge_pdf') }}" class="card-link text-danger"><i class="fas fa-file-pdf icon-lg icon-red icon-bg-yellow icon-bg-circle "></i> Merge PDFs</a></h5>
+            <h5 class="card-title"><a style="text-decoration:none" href="{{ url_for('merge_pdf') }}" class="card-link text-danger"><i class="fas fa-file-pdf icon-lg icon-red icon-bg-yellow icon-bg-circle "></i> Merge PDFs</a></h5>
             <p class="card-text">Click to merge two or more PDF files. Can merge up to 10 PDF files.</p>
           </div>
         </div>
       </div>
-      <div class="col-md-6 col-lg-4  mb-5 fade-in">
+      <div class="col-md-6 col-lg-4  mb-5 ">
         <div class="card border-0 shadow rounded-xs p-3 h-100">
           <div class="card-body">
-            <h5 class="card-title"><a href="{{ url_for('split_pdf') }}" class="card-link text-danger"><i class="fas fa-cut icon-lg icon-red icon-bg-yellow icon-bg-circle "></i> Split PDF</a></h5>
+            <h5 class="card-title"><a style="text-decoration:none" href="{{ url_for('split_pdf') }}" class="card-link text-danger"><i class="fas fa-cut icon-lg icon-red icon-bg-yellow icon-bg-circle "></i> Split PDF</a></h5>
             <p class="card-text">Click to extract pages (split) from a PDF file based on page number.</p>
           </div>
         </div>
       </div>
-      <div class="col-md-6 col-lg-4  mb-5 fade-in">
+      <div class="col-md-6 col-lg-4  mb-5 ">
         <div class="card border-0 shadow rounded-xs p-3 h-100">
           <div class="card-body">
-            <h5 class="card-title"><a href="{{ url_for('remove_pages') }}" class="card-link text-danger"><i class="fas fa-trash icon-lg icon-red icon-bg-yellow icon-bg-circle "></i> Remove Pages</a></h5>
+            <h5 class="card-title"><a style="text-decoration:none" href="{{ url_for('remove_pages') }}" class="card-link text-danger"><i class="fas fa-trash icon-lg icon-red icon-bg-yellow icon-bg-circle "></i> Remove Pages</a></h5>
             <p class="card-text">Click to remove specified pages from a PDF file.</p>
           </div>
         </div>
       </div>
-      <div class="col-md-6 col-lg-4  mb-5 fade-in">
+      <div class="col-md-6 col-lg-4  mb-5 ">
         <div class="card border-0 shadow rounded-xs p-3 h-100">
           <div class="card-body">
-            <h5 class="card-title"><a href="{{ url_for('rotate_pdf') }}" class="card-link text-danger"><i class="fas fa-sync-alt icon-lg icon-red icon-bg-yellow icon-bg-circle "></i> Rotate PDF</a></h5>
+            <h5 class="card-title"><a style="text-decoration:none" href="{{ url_for('rotate_pdf') }}" class="card-link text-danger"><i class="fas fa-sync-alt icon-lg icon-red icon-bg-yellow icon-bg-circle "></i> Rotate PDF</a></h5>
             <p class="card-text">Click to rotate a PDF file to a desired degree.</p>
           </div>
         </div>
       </div>
-      <div class="col-md-6 col-lg-4  mb-5 fade-in">
+      <div class="col-md-6 col-lg-4  mb-5 ">
         <div class="card border-0 shadow rounded-xs p-3 h-100">
           <div class="card-body">
-            <h5 class="card-title"><a href="{{ url_for('watermark_pdf') }}" class="card-link text-danger"><i class="fas fa-water icon-lg icon-red icon-bg-yellow icon-bg-circle "></i> Add Watermark</a></h5>
+            <h5 class="card-title"><a style="text-decoration:none" href="{{ url_for('watermark_pdf') }}" class="card-link text-danger"><i class="fas fa-water icon-lg icon-red icon-bg-yellow icon-bg-circle "></i> Add Watermark</a></h5>
             <p class="card-text">Click to add a watermark to your PDF file.</p>
           </div>
         </div>
       </div>
-      <div class="col-md-6 col-lg-4  mb-5 fade-in">
+      <div class="col-md-6 col-lg-4  mb-5 ">
         <div class="card border-0 shadow rounded-xs p-3 h-100">
           <div class="card-body">
-            <h5 class="card-title"><a href="{{ url_for('encrypt_pdf') }}" class="card-link text-danger"><i class="fas fa-lock icon-lg icon-red icon-bg-yellow icon-bg-circle "></i> Encrypt PDF</a></h5>
+            <h5 class="card-title"><a style="text-decoration:none" href="{{ url_for('encrypt_pdf') }}" class="card-link text-danger"><i class="fas fa-lock icon-lg icon-red icon-bg-yellow icon-bg-circle "></i> Encrypt PDF</a></h5>
             <p class="card-text">Click to encrypt a PDF file using a password.</p>
           </div>
         </div>
       </div>
 
-      <div class="col-md-6 col-lg-4  mb-5 fade-in">
+      <div class="col-md-6 col-lg-4  mb-5 ">
         <div class="card border-0 shadow rounded-xs p-3 h-100">
           <div class="card-body">
-            <h5 class="card-title d-flex align-items-center g-5"><a href="{{ url_for('image_pdf') }}" class="card-link text-danger"><i class="fas fa-images icon-lg icon-red icon-bg-yellow icon-bg-circle "></i> Images to PDF</a></h5>
+            <h5 class="card-title d-flex align-items-center g-5"><a style="text-decoration:none" href="{{ url_for('image_pdf') }}" class="card-link text-danger"><i class="fas fa-images icon-lg icon-red icon-bg-yellow icon-bg-circle "></i> Images to PDF</a></h5>
             <p class="card-text">Click to merge images in single PDF</p>
           </div>
         </div>
@@ -76,7 +78,7 @@
     <div class="p-3 w-full text-white mt-3 mb-5 d-flex align-items-center justify-content-center" style="background-color: black;">
         <h4>Our Services</h4>
     </div>
-    <div class="row m-5">
+    <div class="row ">
         <div class="col-lg-4 col-sm-6 mb-4">
             <div class="card border-0 shadow rounded-xs pt-5">
                 <div class="card-body"> <i class="fa fa-fast-forward icon-lg icon-primary icon-bg-primary icon-bg-circle mb-3"></i>

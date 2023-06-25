@@ -9,8 +9,8 @@
     <link rel="stylesheet" type= "text/css" href= "{{ url_for('static', filename='css/styles.css') }}">
     <link rel="shortcut icon" href="{{ url_for('static', filename='images/file.svg') }}" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;800&display=swap" rel="stylesheet">
     <title>PDF Tools</title>
 </head>
 <body>
@@ -24,7 +24,6 @@
         {% endfor %}
       {% endif %}
     {% endwith %}
-
     {% block content %}
     {% endblock %}
     {% include 'footer.html' %}

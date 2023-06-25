@@ -1,5 +1,8 @@
 {% extends 'layout.html' %}
 {% block content %}
+
+
+
 <div class="container main-content">
     <h2 class="pb-2 text-danger">Watermark PDF</h2>
     <form action="" method="POST" enctype="multipart/form-data">
@@ -12,7 +15,7 @@
             <input type="file" name="watermark_file" accept=".pdf" required>
         </div>
 
-        <div id="preview-container" class="mt-4 mb-4 row justify-content-center" style="min-height: 50vh;">
+        <div id="preview-container" class="m-2 row d-flex align-items-center justify-content-center" style="min-height: 50vh;background-color: ghostwhite;">
             <div class="col-md-4 col-sm-6 col-12 mb-4">
                 <h4>No files uploaded</h4>
             </div>
