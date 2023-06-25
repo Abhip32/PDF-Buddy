@@ -1,16 +1,16 @@
 
 document.addEventListener("DOMContentLoaded", function() {
-    var cards = document.getElementsByClassName("fade-in");
-  
-    // Add the "visible" class to each card with a delay
-    for (var i = 0; i < cards.length; i++) {
-      (function(index) {
-        setTimeout(function() {
-          cards[index].classList.add("visible");
-        }, index * 200); // Adjust the delay (in milliseconds) between each card
-      })(i);
-    }
-  });
+  var cards = document.getElementsByClassName("fade-in");
+
+  // Add the "visible" class to each card with a delay
+  for (var i = 0; i < cards.length; i++) {
+    (function(index) {
+      setTimeout(function() {
+        cards[index].classList.add("visible");
+      }, index * 200); // Adjust the delay (in milliseconds) between each card
+    })(i);
+  }
+});
 
 function handleFileSelectImg(event) {
     var previewContainer = document.getElementById('preview-container');
@@ -50,7 +50,6 @@ function handleFileSelectImg(event) {
         reader.readAsDataURL(file);
     }
 }
-document.getElementById('filesImages').addEventListener('change', handleFileSelectImg, false);
 
  // Function to handle file selection and display the first page preview
  function handleFileSelect(event) {
@@ -113,8 +112,6 @@ document.getElementById('filesImages').addEventListener('change', handleFileSele
     }
 }
 
-// Add an event listener to the file input element
-document.getElementById('files').addEventListener('change', handleFileSelect, false);
 
 function changePasswordVisibility() {
     const password = document.getElementById('password');

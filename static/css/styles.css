@@ -12,8 +12,8 @@ body{
   }
 
 .img-fluid{
-    height: 350px;
-    width: 270px;
+    height: min-content;
+    width: min-content;
     border: 1px solid black;
 }
 

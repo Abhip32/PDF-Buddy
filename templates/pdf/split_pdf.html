@@ -4,7 +4,7 @@
     <h2 class="pb-2 text-danger">Split PDF</h2>
     <form action="" method="POST" enctype="multipart/form-data">
         <div class="form-group mt-4 bg-dark text-white p-3 rounded-3 border-0">
-            <input type="file" name="file" id ="files" accept=".pdf" required>
+            <input type="file" name="file" id ="files" accept=".pdf" required onchange="handleFileSelect(event)">
         </div>
         
         <div id="preview-container" class="mt-4 mb-4 row justify-content-center" style="min-height: 50vh;">
