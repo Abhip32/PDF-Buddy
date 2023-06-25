@@ -1,4 +1,5 @@
-import os, zipfile, PyPDF2
+import os, zipfile, PyPDF2,io
+from PIL import Image
 
 def merge(files):
     pdfWriter = PyPDF2.PdfFileWriter()
@@ -103,3 +104,21 @@ def encrypt(pdf, password):
     pdfOutput = open('output.pdf', 'wb')
     pdfWriter.write(pdfOutput)
     pdfOutput.close()
+
+
+def merge_images_to_pdf(images):
+    pdf_writer = PyPDF2.PdfFileWriter()
+    for image_path in images:
+        image = Image.open(image_path)
+        image_pdf = image.convert("RGB")
+        img_byte_array = io.BytesIO()
+        image_pdf.save(img_byte_array, format='PDF')
+        img_byte_array.seek(0)
+        pdf_writer.addPage(PyPDF2.PdfFileReader(img_byte_array).getPage(0))
+
+    pdfOutput = open('output.pdf', 'wb')
+    pdf_writer.write(pdfOutput)
+    pdfOutput.close()
+
+
+

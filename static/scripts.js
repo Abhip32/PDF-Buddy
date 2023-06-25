@@ -1,5 +1,56 @@
 
+document.addEventListener("DOMContentLoaded", function() {
+    var cards = document.getElementsByClassName("fade-in");
+  
+    // Add the "visible" class to each card with a delay
+    for (var i = 0; i < cards.length; i++) {
+      (function(index) {
+        setTimeout(function() {
+          cards[index].classList.add("visible");
+        }, index * 200); // Adjust the delay (in milliseconds) between each card
+      })(i);
+    }
+  });
 
+function handleFileSelectImg(event) {
+    var previewContainer = document.getElementById('preview-container');
+    previewContainer.innerHTML = '';
+
+    var files = event.target.files;
+    for (var i = 0; i < files.length; i++) {
+        var file = files[i];
+
+        // Create a FileReader instance
+        var reader = new FileReader();
+
+        // Closure to capture the file information
+        reader.onload = (function (file) {
+            return function (e) {
+                // Create a new image element
+                var image = document.createElement('img');
+                image.src = e.target.result;
+                image.classList.add('img-fluid');
+
+                // Create a new column div
+                var column = document.createElement('div');
+                column.classList.add('col-md-4', 'col-sm-6', 'col-12', 'bg-light', 'm-3', 'p-3');
+
+                // Create a heading element for the file name
+                var fileName = document.createElement('h6');
+                fileName.textContent = file.name;
+                column.appendChild(fileName);
+                column.appendChild(image);
+
+                // Append the column to the container
+                previewContainer.appendChild(column);
+            };
+        })(file);
+
+        // Read the file as a data URL
+        reader.readAsDataURL(file);
+    }
+}
+document.getElementById('filesImages').addEventListener('change', handleFileSelectImg, false);
 
  // Function to handle file selection and display the first page preview
  function handleFileSelect(event) {

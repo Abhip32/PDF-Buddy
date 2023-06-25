@@ -1,6 +1,9 @@
 import re, smtplib
 from flask import Flask, render_template, request, redirect, url_for, flash, send_file
-from pdf_tools import merge, split, remove, rotate, watermark, encrypt
+from pdf_tools import merge, split, remove, rotate, watermark, encrypt,merge_images_to_pdf
+from docx2pdf import convert
+import os
+
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'supersecret'
@@ -111,6 +114,19 @@ def encrypt_pdf():
         encrypt(pdf, password)
         return send_file('output.pdf', as_attachment=True)
     return render_template('pdf/encrypt_pdf.html')
+
+@app.route('/merge_images', methods=['GET', 'POST'])
+def image_pdf():
+    if request.method == 'POST':
+        files = request.files.getlist("filesImages")
+        if len(files) > 1:
+            merge_images_to_pdf(files)
+            return send_file('output.pdf', as_attachment=True)
+        else:
+            error = 'Please upload more than one file for merging'
+    return render_template('pdf/merge_images.html')
+
+
 
 
 
