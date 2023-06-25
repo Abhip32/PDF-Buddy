@@ -1,8 +1,7 @@
 import re, smtplib
 from flask import Flask, render_template, request, redirect, url_for, flash, send_file
 from pdf_tools import merge, split, remove, rotate, watermark, encrypt,merge_images_to_pdf
-from docx2pdf import convert
-import os
+
 
 
 app = Flask(__name__)
